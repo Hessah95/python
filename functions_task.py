@@ -12,9 +12,7 @@ def check_birthdate (year, month, day) :
 	elif today < In_Date :
 		# the given birthdate is in the future
 		return False
-	else :
-		print ("It's imposiple !!! ofcourse this is not your birthday -_-")
-
+	
 
 
 def calculate_age (year, month, day) :
@@ -49,4 +47,10 @@ day = int(input ("Enter day of birth: "))
 In_Date = date(year, month, day) # to store the intered date
 
 if check_birthdate (year, month, day) == True :
+	# the given birthdate is in the past
 	calculate_age (year, month, day)
+elif check_birthdate (year, month, day) == False :
+	# the given birthdate is in the future
+	print ("Hay!! You came from the future O_O'")
+else :
+	print ("It's imposiple !!! ofcourse this is not your birthday -_- \nYour age is less than a day =P")
