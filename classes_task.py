@@ -25,17 +25,17 @@ class Employee :
 		return today.year-self.employement_date
 
 	def __str__ (self):
-		return "Employee(name="+self.name+", age="+str(self.age)+", salary="+str(self.salary)+", working years: "+str(self.get_working_years())+")"
+		return "name= "+self.name+", age= "+str(self.age)+", salary= "+str(self.salary)+", working years: "+str(self.get_working_years())
 
 
 #######################################################
 
-class Manager :
+class Manager (Employee):
 	#attributes for Manager class with the initial values
-	name = ""
-	age = 0
-	salary = 0
-	employment_date = 0
+	#name = ""
+	#age = 0
+	#salary = 0
+	#employment_date = 0
 	bonus_percentage = 0
 
 	def __init__ (self, name, age, salary, employement_date, bonus_percentage, **kwargs):
@@ -55,7 +55,7 @@ class Manager :
 		return self.bonus_percentage*self.salary
 
 	def __str__ (self):
-		return "Manager(name: "+self.name+", age: "+str(self.age)+", salary: "+str(self.salary)+", working years: "+str(self.get_working_years())+", bonus: "+str(self.get_bonus())+")"
+		return "name: "+self.name+", age: "+str(self.age)+", salary: "+str(self.salary)+", working years: "+str(self.get_working_years())+", bonus: "+str(self.get_bonus())
 
 #################################################################
 #E = Employee("Fatmah", 31, 850, 2017)
