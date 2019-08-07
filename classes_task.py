@@ -32,17 +32,10 @@ class Employee :
 
 class Manager (Employee):
 	#attributes for Manager class with the initial values
-	#name = ""
-	#age = 0
-	#salary = 0
-	#employment_date = 0
 	bonus_percentage = 0
 
 	def __init__ (self, name, age, salary, employement_date, bonus_percentage, **kwargs):
-		self.name = name
-		self.age = age
-		self.salary = salary
-		self.employement_date = employement_date
+		Employee.__init__(self, name, age, salary, employement_date)
 		self.bonus_percentage = bonus_percentage
 		for attribut, value in kwargs.items():
 			setattr (self, attribute, value)
